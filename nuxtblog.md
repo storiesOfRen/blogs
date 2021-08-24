@@ -1,4 +1,4 @@
-So I recently updated my personal resume website, and I thought it would be a good opportunity to refresh on Vue and learn [NuxtJs](https://nuxtjs.org/).  So I thought I'd give a run through of my experience.
+I recently updated my personal resume website, and I thought it would be a good opportunity to refresh on Vue and learn [NuxtJs](https://nuxtjs.org/). So, I thought I'd give a run through of my experience.
 
 The general setup of Nuxt is pretty self explanatory with in its stepper. They've got setup docs for `yarn`, `npx`, and `npm`.  I went through the `npx` choose your own adventure setup.
 
@@ -99,9 +99,9 @@ __My Fave Things__
     - `<LazyTheFooter />`
     - Using the lazy prefix you can also dynamically import a component when an event is triggered.
 - Layouts
-  - So this may be more in line with liking the templating feature in Vue, but I dig the reusable layouts. On my personal resume site I really only extended the default layout, but the fact that I can create different layouts for specific templates is just cool.
+  - This may be more in line with liking the templating feature in Vue, but I dig the reusable layouts. On my personal resume site I really only extended the default layout, but the fact that I can create different layouts for specific templates is just cool.
 - Pages
-  - I mentioned before that Nuxt like Next has an opinionated routing system.  So the router is built-in, cool right? Well not half as cool as the router configurations being automatically created for me just by adding my files to the `Pages` Directory!!!! 
+  - I mentioned before that Nuxt like Next has an opinionated routing system.  The router is built-in, cool right? Well not half as cool as the router configurations being automatically created for me just by adding my files to the `Pages` Directory!!!! 
 
 I'm using [Dependabot](https://github.com/dependabot), for the first time, I'm like it so far also.  It's kind of like how My cats tell me if they need fed, but plants don't... as in the Dependabot tells me about when my Dependencies need updating and if I relied on my own watchful eyes, the dependencies would probably die like any plants I've tried to keep.
 
@@ -129,7 +129,7 @@ After running this script you will need to commit your changes at the very least
 
 ### [Deploy to `gh-pages`](https://nuxtjs.org/docs/2.x/deployment/github-pages#deploying-to-github-pages-for-repository)
 
-The deploying documentation is stellar! It's also not limited to GitHub, so that's cool!
+The deploying documentation is stellar! It's also not limited to GitHub and that's pretty darn cool!
 But for GitHub you want use [`push-dir`](https://github.com/L33T-KR3W/push-dir) 
 
 ```
