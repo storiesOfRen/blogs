@@ -58,3 +58,20 @@ A subset of web vitals that can be applied to all web pages, should be examined 
 - `Next.js-render`
   - How long it takes a page to finish rendering after a route change.
   - It is measured in Milliseconds.
+
+### Thoughts on improving the **Core Web Values**
+
+- `LCP: Largest Contentful Paint`
+  - Remove unnecessary 3rd part scripts
+  - Set up Lazy or Dynamic loading, Loading components only when they are needed
+  - Remove large page elements
+  - Minify your CSS
+  - Upgrade your hosting
+- `FID: First Input Delay`
+  - Minimize JavaScript, page interactions are slowed down if the page is loading javascript.
+  - Remove any unnecessary third-party scripts
+  - Use a browser caching
+- `CLS: Cumulative Layout Shift`
+  - Set size attributes for any medias
+  - Ads should have reserved space, placeholders
+  - Adding new UI elements should happen in a way that they don't unexpectedly push content down or over.
