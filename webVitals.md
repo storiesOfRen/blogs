@@ -1,8 +1,8 @@
 ## Getting to Know Web Vitals
 
-In a recent project, my NextJS with Material UI deployment has been loading the initial render slow. So I am learning the debugging process behind that performance lag, which has me getting to know the Web Vitals. And i thought I'd share what I've learned thus far with you.
+In a recent project, my NextJS with Material UI deployment has been loading the initial render slow. So I am learning the debugging process behind that performance lag, which has me getting to know the Web Vitals a bit better. And I thought I'd share what I've learned thus far with you.
 
-I can gain access to the Web Vitals in a few different places, but currently I just want the value output so I'm using the `reportWebVitals` function that is inherit in NextJS and logging them out for quick access, for more detail and suggestions I run a [Lighthouse](https://developers.google.com/web/tools/lighthouse/) report.
+I can gain access to the Web Vitals in a few different places, but currently I just want the value output so I'm using the `reportWebVitals` function that is inherit in NextJS and logging them out for quick access, for more detail and suggestions I can run a [Lighthouse](https://developers.google.com/web/tools/lighthouse/) report.
 
 ![Lighthouse Performance Report, reading a score of 97 for Ren Estep dot com](images/lighthouse-performance.png)
 
@@ -12,7 +12,7 @@ In the simplest terms, Web vitals are useful metrics that help in the examinatio
 
 ### So what are the **Core Web Values**?
 
-A subset of web vitals that can be applied to all web pages, should be examined and weight by site owners, and have a thread to all the Google tools. The subsets, each has a reference to a specific type of user experience. These references provide measurement and can reflect critical user-centric outcomes.
+A subset of web vitals that can be applied to all web pages, should be examined and weight by site owners, and have a thread to all the Google tools. The subsets, each has a reference to a specific type of user experience. These references provide measurements and can reflect critical user-centric outcomes.
 
 #### The Core Web Vitals:
 
@@ -23,7 +23,9 @@ A subset of web vitals that can be applied to all web pages, should be examined 
 #### The metrics I have access to:
 
 - `TTFB: Time To First Byte`
+
   - This metric refers to the time it takes to receive the first byte of information after the browser request it.
+
 - `FCP: First Contentful Paint`
 
   - The metric reflect the time to the first bit of content rendered to the DOM.
@@ -48,13 +50,17 @@ A subset of web vitals that can be applied to all web pages, should be examined 
 #### Additional Next Specific Metrics:
 
 - `Next.js-hydration`
+
   - This measures the length of time from start to finish, it takes a page to Hydrate in milliseconds.
   - What is Hydration?
     - The process of attaching react listeners to HTML-DOM nodes.
     - Rehydration is basically the same, but in reference to Server Side Rendered(SSR) rendered HTML. The listeners still need to be attached.
+
 - `Next.js-route-change-to-render`
+
   - How long it takes a page to start rendering after a route change.
   - It is measured in Milliseconds.
+
 - `Next.js-render`
   - How long it takes a page to finish rendering after a route change.
   - It is measured in Milliseconds.
@@ -62,16 +68,29 @@ A subset of web vitals that can be applied to all web pages, should be examined 
 ### Thoughts on improving the **Core Web Values**
 
 - `LCP: Largest Contentful Paint`
+
   - Remove unnecessary 3rd part scripts
   - Set up Lazy or Dynamic loading, Loading components only when they are needed
   - Remove large page elements
   - Minify your CSS
   - Upgrade your hosting
+
 - `FID: First Input Delay`
+
   - Minimize JavaScript, page interactions are slowed down if the page is loading javascript.
   - Remove any unnecessary third-party scripts
   - Use a browser caching
+
 - `CLS: Cumulative Layout Shift`
   - Set size attributes for any medias
   - Ads should have reserved space, placeholders
   - Adding new UI elements should happen in a way that they don't unexpectedly push content down or over.
+
+I'm in the process of testing out different solutions, for my larger numbers. I'm enjoying these new learning opportunities that come with bigger responsibilities. I hope my notes help on your learning path as well.
+
+## Resources
+
+- [Web.dev Web Vitals](https://web.dev/vitals/)
+- [BACKLINKO User Experience Signals: Core Web Vitals](https://backlinko.com/hub/seo/core-web-vitals)
+- [NextJS Web Vitals](https://nextjs.org/docs/advanced-features/measuring-performance#build-your-own)
+- [NextJs Learn: Improving Your Core Web Vitals](https://nextjs.org/learn/seo/improve)
