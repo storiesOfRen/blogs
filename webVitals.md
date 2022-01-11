@@ -78,15 +78,17 @@ A subset of web vitals that can be applied to all web pages, should be examined 
 - `FID: First Input Delay`
 
   - Minimize JavaScript, page interactions are slowed down if the page is loading javascript.
-  - Remove any unnecessary third-party scripts
+  - Remove any unnecessary 3rd party scripts
   - Use a browser caching
 
 - `CLS: Cumulative Layout Shift`
-  - Set size attributes for any medias
+  - Set size attributes for any medias types
   - Ads should have reserved space, placeholders
   - Adding new UI elements should happen in a way that they don't unexpectedly push content down or over.
+    - Avoid content shifting around the page.
+    - Dynamically/ lazy load components
 
-I'm in the process of testing out different solutions, for my larger numbers. I'm enjoying these new learning opportunities that come with bigger responsibilities. I hope my notes help on your learning path as well.
+I'm in the process of testing out different solutions, for my larger numbers. I'm looking at rendering a static page initially, fingers crossed it's the first solution (_we all know it never is_)! It's been a joy learning as new development opportunities that have come with bigger responsibilities. I hope my notes help on your learning path as well.
 
 ## Resources
 
