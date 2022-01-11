@@ -68,8 +68,6 @@ The metrics listed above are used in measuring important performance elements of
   - How long it takes a page to finish rendering after a route change.
   - It is measured in Milliseconds.
 
-  So `reportWebVitals` will give you access to more Web Vitals metics than just the Core Web Vitals.
-
 ### Thoughts on improving the **Core Web Values**
 
 - `LCP: Largest Contentful Paint`
