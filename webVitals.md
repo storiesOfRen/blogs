@@ -20,7 +20,9 @@ A subset of web vitals that can be applied to all web pages, should be examined 
 - `FID: First Input Delay`
 - `CLS: Cumulative Layout Shift`
 
-#### The metrics I have access to:
+The metrics listed above are used in measuring important performance elements of user experience, when interacting with a webpage. If you were running a Lighthouse report, the thresholds that are reflected for each metric helps define the performance score for the webpage you're reviewing. Below the Core Web Vitals are expanded upon, along with other metrics that are available through the `reportWebVitals`, which include Web Vitals and NextJS specific metrics.
+
+#### The Web Vitals metrics I have access to through the `reportWebVitals` method:
 
 - `TTFB: Time To First Byte`
 
@@ -47,7 +49,7 @@ A subset of web vitals that can be applied to all web pages, should be examined 
   - A metric for measuring visual stability.
   - This measures the largest burst of layout shifts that are unexpected through out the life of a page.
 
-#### Additional Next Specific Metrics:
+#### Additional NextJS Specific Metrics:
 
 - `Next.js-hydration`
 
@@ -62,8 +64,11 @@ A subset of web vitals that can be applied to all web pages, should be examined 
   - It is measured in Milliseconds.
 
 - `Next.js-render`
+
   - How long it takes a page to finish rendering after a route change.
   - It is measured in Milliseconds.
+
+  So `reportWebVitals` will give you access to more Web Vitals metics than just the Core Web Vitals.
 
 ### Thoughts on improving the **Core Web Values**
 
