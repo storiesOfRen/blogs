@@ -205,6 +205,8 @@ const router = {
 };
 ```
 
+When creating your routes, you can locally access the route params at both the page and component level. You can gain access through referencing `this.$route.params.{parameterName}`.
+
 And there are the basics surrounding the coolness of the Nuxt Automatic Routing system. If you wanted to learn more about Nuxt router you can checkout how to extend the Nuxt router, reading about it in the Nuxt Docs under the [File System Routing Feature: Extending the Router](https://nuxtjs.org/docs/features/file-system-routing#extending-the-router)!
 
 Thanks for reading!
