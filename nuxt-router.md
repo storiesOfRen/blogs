@@ -151,6 +151,8 @@ pages/
 
 ```
 
+Dynamic routes are routes where the name of the route includes unique identifiers and/or are unknown. A good example of this is if you are going to specific user's profile page, like: `someSite.com/userID`. In Nuxt we create dynamic link by adding an underscore to the beginning of the name of the route, like we see in the file tree above with `_slug.vue` and `users/_id.vue`. You can have both dynamic directories and dynamic routes.
+
 ## Nested Routes
 
 ```
@@ -163,6 +165,49 @@ pages/
 --| users.vue
 
 ```
+
+Nested routes are created when a directory and a `.vue` file are at the same level and named the same, you can see an example of this above in the file tree for nested routes.
+
+Creating these more complex file trees for the routing system still creates a router object similar to the basic routes, but a little different, specifically in terms of the nested routes. Below is an example holding both a dynamic routes and nested.
+
+```js
+const router = {
+  routes: [
+    {
+      name: "index",
+      path: "/",
+      component: "pages/index.vue",
+    },
+    {
+      name: "About",
+      path: "/about",
+      component: "pages/About.vue",
+    },
+    {
+      // this is the basic nested route
+      path: "/blog",
+      component: "pages/blog.vue",
+      children: [
+        {
+          name: ":id",
+          path: "/blog/:id",
+          component: "pages/blog/_id.vue",
+        },
+      ],
+    },
+    {
+      // this is the basic dynamic route
+      name: "User",
+      path: "/user/:id",
+      component: "pages/user/_id.vue",
+    },
+  ],
+};
+```
+
+And there are the basics surrounding the coolness of the Nuxt Automatic Routing system. If you wanted to learn more about Nuxt router you can checkout how to extend the Nuxt router, reading about it in the Nuxt Docs under the [File System Routing Feature: Extending the Router](https://nuxtjs.org/docs/features/file-system-routing#extending-the-router)!
+
+Thanks for reading!
 
 ## Resources
 
